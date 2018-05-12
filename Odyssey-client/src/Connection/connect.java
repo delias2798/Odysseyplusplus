@@ -1,4 +1,5 @@
 package Connection;
+import javax.xml.bind.annotation.*;
 import java.net.*;
 import java.io.*;
 public class connect {
@@ -24,5 +25,10 @@ public class connect {
         }catch (Exception e){
             System.out.println("Error: "+e.getMessage());
         }
+    }
+
+    public String toXML(Serializable object){
+
+        return null;
     }
 }
