@@ -94,7 +94,16 @@ public class Track {
                 ", letter=" + letter + "'" +
                 "}";
     }
+    //output
+    /*
+    <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <track id="1">
+        <album>No me recuerod</album>
+        <artist>The Beatles</artist>
+        <genre>Rock?</genre>
+        <letter>Hey jude, nananananan, he</letter>
+        <title>Hey Jude</title>
+        <year>19##</year>
+    </track>
+     */
 }
-/*
-
-        */

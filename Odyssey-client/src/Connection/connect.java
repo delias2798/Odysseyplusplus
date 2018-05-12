@@ -5,12 +5,14 @@ import java.io.*;
 public class connect {
     public static void main(String[] args){
         connect x = new connect();
-        x.initClient();
+        //x.initClient();
+        //x.connect2();
+        x.connect3("hola111111");
     }
-    final String Host="localholst";
-    final int PORT=5000;
-    Socket sc;
 
+    final String Host="192.168.1.109";
+    final int PORT=8080;
+    Socket sc,clientSocket;
     DataOutputStream out;
     DataInputStream in;
     public void initClient(){
@@ -19,7 +21,7 @@ public class connect {
 
             out=new DataOutputStream(sc.getOutputStream());
 
-            out.writeUTF("holi");
+            out.writeUTF("test1111111111");
 
             sc.close();
         }catch (Exception e){
@@ -27,8 +29,52 @@ public class connect {
         }
     }
 
-    public String toXML(Serializable object){
+    public void connect2(){
+        try{
+            String sentence="hi";
+            String modifiedSentence;
+            BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
+            clientSocket=new Socket(Host,PORT);
 
-        return null;
+            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
+            BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+
+            sentence = inFromUser.readLine();
+            outToServer.writeUTF(sentence);
+            //outToServer.writeBytes(sentence + '\n');
+            modifiedSentence = inFromServer.readLine();
+            System.out.println(modifiedSentence);
+            clientSocket.close();
+        }catch (Exception e){}
+
+    }
+
+    public void connect3(String msg){
+        try {
+            InetAddress address = InetAddress.getByName(Host);
+            sc = new Socket(address, PORT);
+
+            //Send the message to the server
+            OutputStream os = sc.getOutputStream();
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            BufferedWriter bw = new BufferedWriter(osw);
+
+            String number = msg;//"Espero que sirva";
+
+            String sendMessage = number + "\n";
+            bw.write(sendMessage);
+            bw.flush();
+            System.out.println("Message sent to the server : "+sendMessage);
+
+            //Get the return message from the server
+            /*InputStream is = sc.getInputStream();
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String message = br.readLine();
+            System.out.println("Message received from the server : " +message);*/
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 }
