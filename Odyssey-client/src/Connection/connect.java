@@ -5,9 +5,7 @@ import java.io.*;
 public class connect {
     public static void main(String[] args){
         connect x = new connect();
-        //x.initClient();
-        //x.connect2();
-        x.connect3("hola111111");
+        x.connect("hola111111");
     }
 
     final String Host="192.168.1.109";
@@ -15,41 +13,8 @@ public class connect {
     Socket sc,clientSocket;
     DataOutputStream out;
     DataInputStream in;
-    public void initClient(){
-        try{
-            sc=new Socket(Host,PORT);
 
-            out=new DataOutputStream(sc.getOutputStream());
-
-            out.writeUTF("test1111111111");
-
-            sc.close();
-        }catch (Exception e){
-            System.out.println("Error: "+e.getMessage());
-        }
-    }
-
-    public void connect2(){
-        try{
-            String sentence="hi";
-            String modifiedSentence;
-            BufferedReader inFromUser = new BufferedReader(new InputStreamReader(System.in));
-            clientSocket=new Socket(Host,PORT);
-
-            DataOutputStream outToServer = new DataOutputStream(clientSocket.getOutputStream());
-            BufferedReader inFromServer = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
-
-            sentence = inFromUser.readLine();
-            outToServer.writeUTF(sentence);
-            //outToServer.writeBytes(sentence + '\n');
-            modifiedSentence = inFromServer.readLine();
-            System.out.println(modifiedSentence);
-            clientSocket.close();
-        }catch (Exception e){}
-
-    }
-
-    public void connect3(String msg){
+    public void connect(String msg){
         try {
             InetAddress address = InetAddress.getByName(Host);
             sc = new Socket(address, PORT);

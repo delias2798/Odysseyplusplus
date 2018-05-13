@@ -100,7 +100,7 @@ public class Track {
     <track id="1">
         <album>No me recuerod</album>
         <artist>The Beatles</artist>
-        <genre>Rock?</genre>
+        <genre>Rock</genre>
         <letter>Hey jude, nananananan, he</letter>
         <title>Hey Jude</title>
         <year>19##</year>

@@ -90,7 +90,7 @@ public class User {
     /*
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
     <user username="edd">
-        <age>18</age>
+        <age>22</age>
         <friends>No tengo</friends>
         <lastname>Solano</lastname>
         <like>Any</like>

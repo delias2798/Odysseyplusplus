@@ -14,6 +14,7 @@ public class JAXBObjectToXml {
         connect connection=new connect();
         JAXBObjectToXml xml = new JAXBObjectToXml();
         Track track = new Track();
+        Track track2 = new Track();
 
         track.setId(1);
         track.setTitle("Hey Jude");
@@ -23,25 +24,30 @@ public class JAXBObjectToXml {
         track.setYear("19##");
         track.setLetter("Hey jude, nananananan, he");
 
-        String xml_string=xml.ConvertToXMLSong(track);
+        String xml_string=xml.ConvertToXML(track,Track.class);
         //connection.connect3(xml_string);
         System.out.println(xml_string);
-
+        track2=xml.ConvertToTrack(xml_string);
+        System.out.println(track2.getAlbum());
         User user = new User();
+        User user2 = new User();
         user.setUsername("edd");
         user.setName("Eduardo");
         user.setLastname("Solano");
-        user.setAge("18");
+        user.setAge("22");
         user.setLike("Any");
         user.setPass("123456");
         user.setFriends("No tengo");
-        xml_string=xml.ConvertToXMLUser(user);
+        xml_string=xml.ConvertToXML(user,User.class);
         System.out.println(xml_string);
+
+        user2=xml.ConvertToUser(xml_string);
+        System.out.println(user2.getFriends());
     }
 
-    public String ConvertToXMLSong(Object object){
+    public String ConvertToXML(Object object, Class class_){
         try {
-            JAXBContext context = JAXBContext.newInstance(Track.class);
+            JAXBContext context = JAXBContext.newInstance(class_);
 
             Marshaller marshaller = context.createMarshaller();
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
@@ -57,18 +63,15 @@ public class JAXBObjectToXml {
         return null;
     }
 
-    public String ConvertToXMLUser(Object object){
+
+    public User ConvertToUser(String xml_string){
+
         try {
-            JAXBContext context = JAXBContext.newInstance(User.class);
-
-            Marshaller marshaller = context.createMarshaller();
-            marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            StringWriter sw = new StringWriter();
-            marshaller.marshal(object,sw);
-            String xmlString = sw.toString();//transforma xml en xmlString
-            return xmlString;
-
-
+            JAXBContext jaxbContext = JAXBContext.newInstance(User.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            StringReader reader = new StringReader(xml_string);
+            User user = (User) unmarshaller.unmarshal(reader);
+            return user;
         } catch (JAXBException e) {
             e.printStackTrace();
         }
@@ -76,14 +79,16 @@ public class JAXBObjectToXml {
     }
 
     public Track ConvertToTrack(String xml_string){
-        /*try {
-            // Unmarshallers are not thread-safe.  Create a new one every time.
+
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Track.class);
             Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-            XMLStreamReader reader = XMLInputFactory.newInstance().createXMLStreamReader(new StringReader(xmlString));
-            return unmarshaller.unmarshal(reader, YourRootObject.class);
-        } catch (Exception e) {
-            throw new IllegalStateException(e);
-        }*/
+            StringReader reader = new StringReader(xml_string);
+            Track track = (Track) unmarshaller.unmarshal(reader);
+            return track;
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 }
