@@ -13,7 +13,7 @@ public class User {
     private String like;
     private String friends;
 
-    User(){}
+    public User(){}
 
     public String getUsername() {
         return username;
