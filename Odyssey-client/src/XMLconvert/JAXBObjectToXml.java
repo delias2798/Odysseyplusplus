@@ -1,19 +1,19 @@
-package Connection;
+package XMLconvert;
+
+import Connection.connect;
 
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import java.io.Serializable;
 import java.io.StringWriter;
-import javax.xml.stream.*;
 import java.io.*;
 
 public class JAXBObjectToXml {
     public static void main(String[] args) {
         connect connection=new connect();
         JAXBObjectToXml xml = new JAXBObjectToXml();
-        Track track = new Track();
+        /*Track track = new Track();
         Track track2 = new Track();
 
         track.setId(1);
@@ -42,7 +42,13 @@ public class JAXBObjectToXml {
         System.out.println(xml_string);
 
         user2=xml.ConvertToUser(xml_string);
-        System.out.println(user2.getFriends());
+        System.out.println(user2.getFriends());*/
+        byte[] b=new byte[1];
+        Song s = new Song();
+        s.setName("hola");
+        s.setChunk(1);
+        s.setByte_song(b);
+        System.out.println(xml.ConvertToXML(s,Song.class));
     }
 
     public String ConvertToXML(Object object, Class class_){
@@ -60,6 +66,21 @@ public class JAXBObjectToXml {
         } catch (JAXBException e) {
             e.printStackTrace();
         }
+        return null;
+    }
+
+    public String ConvertToXMLsong(Object object, Class class_){
+        try {
+            JAXBContext jaxbContext = JAXBContext.newInstance(class_);
+            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
+            // output pretty printed
+            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
+            jaxbMarshaller.marshal(object, System.out);
+
+        } catch (JAXBException e) {
+            e.printStackTrace();
+        }
+
         return null;
     }
 
