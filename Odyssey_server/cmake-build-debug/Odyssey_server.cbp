@@ -87,6 +87,18 @@
 		<Unit filename="/home/elias/CLionProjects/Odyssey_server/main.cpp">
 			<Option target="Odyssey_server"/>
 		</Unit>
+		<Unit filename="/home/elias/CLionProjects/Odyssey_server/parser.hpp">
+			<Option target="Odyssey_server"/>
+		</Unit>
+		<Unit filename="/home/elias/CLionProjects/Odyssey_server/rapidxml-1.13">
+			<Option target="Odyssey_server"/>
+		</Unit>
+		<Unit filename="/home/elias/CLionProjects/Odyssey_server/tinyxml2.cpp">
+			<Option target="Odyssey_server"/>
+		</Unit>
+		<Unit filename="/home/elias/CLionProjects/Odyssey_server/tinyxml2.h">
+			<Option target="Odyssey_server"/>
+		</Unit>
 		<Unit filename="/home/elias/CLionProjects/Odyssey_server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

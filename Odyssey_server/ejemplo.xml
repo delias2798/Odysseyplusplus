@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<some-users>
+    <user>
+        <username>edd</username>
+        <age>22</age>
+        <friends>No tengo</friends>
+        <lastname>Solano</lastname>
+        <like>Any</like>
+        <name>Eduardo</name>
+        <pass>123456</pass>
+    </user>
+    <user>
+        <username>deam</username>
+        <age>19</age>
+        <friends>Si tengo</friends>
+        <lastname>Arce</lastname>
+        <like>Everything</like>
+        <name>Elías</name>
+        <pass>1234abcd</pass>
+    </user>
+</some-users>
