@@ -43,12 +43,12 @@ public class JAXBObjectToXml {
 
         user2=xml.ConvertToUser(xml_string);
         System.out.println(user2.getFriends());*/
-        byte[] b=new byte[1];
+       /* byte[] b=new byte[1];
         Song s = new Song();
         s.setName("hola");
         s.setChunk(1);
         s.setByte_song(b);
-        System.out.println(xml.ConvertToXML(s,Song.class));
+        System.out.println(xml.ConvertToXML(s,Song.class));*/
     }
 
     public String ConvertToXML(Object object, Class class_){

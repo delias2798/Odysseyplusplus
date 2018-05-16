@@ -19,7 +19,7 @@ public class User {
         return username;
     }
 
-    @XmlAttribute
+    @XmlElement
     public void setUsername(String username) {
         this.username = username;
     }
