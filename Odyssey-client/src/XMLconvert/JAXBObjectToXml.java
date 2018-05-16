@@ -13,7 +13,7 @@ public class JAXBObjectToXml {
     public static void main(String[] args) {
         connect connection=new connect();
         JAXBObjectToXml xml = new JAXBObjectToXml();
-        /*Track track = new Track();
+        Track track = new Track();
         Track track2 = new Track();
 
         track.setId(1);
@@ -24,9 +24,9 @@ public class JAXBObjectToXml {
         track.setYear("19##");
         track.setLetter("Hey jude, nananananan, he");
 
-        String xml_string=xml.ConvertToXML(track,Track.class);
-        //connection.connect3(xml_string);
-        System.out.println(xml_string);
+        String xml_string="&new_can"+xml.ConvertToXML(track,Track.class);
+        connection.connect(xml_string);
+        /*System.out.println(xml_string);
         track2=xml.ConvertToTrack(xml_string);
         System.out.println(track2.getAlbum());
         User user = new User();

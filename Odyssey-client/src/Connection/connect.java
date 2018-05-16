@@ -32,11 +32,11 @@ public class connect {
             System.out.println("Message sent to the server : "+sendMessage);
 
             //Get the return message from the server
-            /*InputStream is = sc.getInputStream();
+            InputStream is = sc.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
             String message = br.readLine();
-            System.out.println("Message received from the server : " +message);*/
+            System.out.println("Message received from the server : " +message);
 
         }catch (Exception e){
             e.printStackTrace();

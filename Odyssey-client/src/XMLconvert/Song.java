@@ -1,8 +1,12 @@
 package XMLconvert;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
 import java.io.StringWriter;
 import java.util.Arrays;
+import java.util.zip.GZIPOutputStream;
+import javax.xml.bind.DatatypeConverter;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -15,6 +19,7 @@ import javax.xml.transform.stream.StreamResult;
 
 import Connection.connect;
 import Player.music_player;
+import com.sun.org.apache.xerces.internal.impl.dv.util.HexBin;
 import org.w3c.dom.Attr;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -31,9 +36,55 @@ public class Song {
         String song="/home/toshiba/Música/test2.mp3";
         music_player player = new music_player();
         byte[] b=player.build_song(song);
-        String xml=s.buildxml(b,"test");
+        String xml="&"+s.buildxml(b,"test");
         connect x = new connect();
         x.connect(xml);
+
+        /**/
+
+    }
+
+    public static void main3(String argv[]){
+        Song s = new Song();
+        String song="/home/toshiba/Música/test2.mp3";
+        music_player player = new music_player();
+        byte[] buffer=player.build_song(song);
+        byte[] v;
+        int readBytes=buffer.length;
+        String str=bytesToHex(buffer);
+
+        /*v=hexStringToByteArray(str);
+        System.out.println(str);
+        System.out.println(buffer);
+        System.out.println(v);*/
+
+    }
+    public static String bytesToHex(byte[] bytes) {
+        String x = HexBin.encode(bytes);
+        return x;
+    }
+    public static byte[] hexStringToByteArray(String s) {
+        int len = s.length();
+        byte[] data = new byte[len / 2];
+        for (int i = 0; i < len; i += 2) {
+            data[i / 2] = (byte) ((Character.digit(s.charAt(i), 16) << 4)
+                    + Character.digit(s.charAt(i+1), 16));
+        }
+        return data;
+    }
+
+
+
+    public static byte[] compress(final String str) throws IOException {
+        if ((str == null) || (str.length() == 0)) {
+            return null;
+        }
+        ByteArrayOutputStream obj = new ByteArrayOutputStream();
+        GZIPOutputStream gzip = new GZIPOutputStream(obj);
+        gzip.write(str.getBytes("UTF-8"));
+        gzip.flush();
+        gzip.close();
+        return obj.toByteArray();
     }
 
 
@@ -70,9 +121,9 @@ public class Song {
                 // staff.setAttribute("id", "1");
 
                 // firstname elements
-                Element firstname = doc.createElement("byte_array");
-                firstname.appendChild(doc.createTextNode(""+range));
-                chunk.appendChild(firstname);
+                Element byte_array = doc.createElement("byte_array");
+                byte_array.appendChild(doc.createTextNode(/*bytesToHex(range)*/""+range));
+                chunk.appendChild(byte_array);
 
 
             }
