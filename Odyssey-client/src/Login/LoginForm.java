@@ -1,9 +1,14 @@
 package Login;
 
+import com.mpatric.mp3agic.InvalidDataException;
+import com.mpatric.mp3agic.NotSupportedException;
+import com.mpatric.mp3agic.UnsupportedTagException;
+
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import javax.swing.*;
 
 public class LoginForm extends JFrame implements ActionListener {
@@ -62,7 +67,19 @@ public class LoginForm extends JFrame implements ActionListener {
         regBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                RegisterForm reg = new RegisterForm();
+                //RegisterForm reg = new RegisterForm();
+                try {
+                    Interface inter = new Interface();
+                } catch (UnsupportedTagException e) {
+                    e.printStackTrace();
+                } catch (InvalidDataException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (NotSupportedException e) {
+                    e.printStackTrace();
+                }
+                frame.setVisible(false);
 
 
             }

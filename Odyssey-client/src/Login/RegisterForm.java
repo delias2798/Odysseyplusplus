@@ -2,6 +2,9 @@ package Login;
 
 import XMLconvert.User;
 import XMLconvert.JAXBObjectToXml;
+import com.mpatric.mp3agic.InvalidDataException;
+import com.mpatric.mp3agic.NotSupportedException;
+import com.mpatric.mp3agic.UnsupportedTagException;
 
 import javax.swing.*;
 import javax.xml.bind.JAXBContext;
@@ -9,6 +12,7 @@ import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.io.StringWriter;
 
 
@@ -25,7 +29,7 @@ public class RegisterForm extends JFrame implements ActionListener {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         JFrame reg = new JFrame("Register Form");
         register = new JButton("Register user");
-        uNameJlabel = new JLabel("Login2.User Name");
+        uNameJlabel = new JLabel("User Name");
         nameLabel = new JLabel("Name");
         lNameJlabel = new JLabel("Last Name");
         passJlabel = new JLabel("Password");
@@ -102,11 +106,17 @@ public class RegisterForm extends JFrame implements ActionListener {
                 JAXBObjectToXml xml = new JAXBObjectToXml();
 
                 System.out.println(xml.ConvertToXML(user, User.class));
-
-
-
-
-
+                try {
+                    Interface interFace = new Interface();
+                } catch (UnsupportedTagException e) {
+                    e.printStackTrace();
+                } catch (InvalidDataException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } catch (NotSupportedException e) {
+                    e.printStackTrace();
+                }
 
 
             }
