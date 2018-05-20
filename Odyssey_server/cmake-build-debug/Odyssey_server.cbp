@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/elias/CLionProjects/Odyssey_server/Archivador.cpp">
+			<Option target="Odyssey_server"/>
+		</Unit>
+		<Unit filename="/home/elias/CLionProjects/Odyssey_server/Archivador.h">
+			<Option target="Odyssey_server"/>
+		</Unit>
 		<Unit filename="/home/elias/CLionProjects/Odyssey_server/main.cpp">
 			<Option target="Odyssey_server"/>
 		</Unit>

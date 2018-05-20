@@ -6,6 +6,20 @@
 
 #IncludeRegexTransform: 
 
+/home/elias/CLionProjects/Odyssey_server/Archivador.cpp
+jsoncpp/json/json.h
+-
+iostream
+-
+Archivador.h
+/home/elias/CLionProjects/Odyssey_server/Archivador.h
+rapidxml-1.13/rapidxml_utils.hpp
+/home/elias/CLionProjects/Odyssey_server/rapidxml-1.13/rapidxml_utils.hpp
+
+/home/elias/CLionProjects/Odyssey_server/Archivador.h
+fstream
+-
+
 /home/elias/CLionProjects/Odyssey_server/main.cpp
 unistd.h
 -
@@ -31,6 +45,10 @@ iostream
 -
 fstream
 -
+cstring
+-
+Archivador.h
+/home/elias/CLionProjects/Odyssey_server/Archivador.h
 rapidxml-1.13/rapidxml_utils.hpp
 /home/elias/CLionProjects/Odyssey_server/rapidxml-1.13/rapidxml_utils.hpp
 

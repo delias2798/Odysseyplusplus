@@ -123,6 +123,33 @@ Odyssey_server/fast:
 	$(MAKE) -f CMakeFiles/Odyssey_server.dir/build.make CMakeFiles/Odyssey_server.dir/build
 .PHONY : Odyssey_server/fast
 
+Archivador.o: Archivador.cpp.o
+
+.PHONY : Archivador.o
+
+# target to build an object file
+Archivador.cpp.o:
+	$(MAKE) -f CMakeFiles/Odyssey_server.dir/build.make CMakeFiles/Odyssey_server.dir/Archivador.cpp.o
+.PHONY : Archivador.cpp.o
+
+Archivador.i: Archivador.cpp.i
+
+.PHONY : Archivador.i
+
+# target to preprocess a source file
+Archivador.cpp.i:
+	$(MAKE) -f CMakeFiles/Odyssey_server.dir/build.make CMakeFiles/Odyssey_server.dir/Archivador.cpp.i
+.PHONY : Archivador.cpp.i
+
+Archivador.s: Archivador.cpp.s
+
+.PHONY : Archivador.s
+
+# target to generate assembly for a file
+Archivador.cpp.s:
+	$(MAKE) -f CMakeFiles/Odyssey_server.dir/build.make CMakeFiles/Odyssey_server.dir/Archivador.cpp.s
+.PHONY : Archivador.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -186,6 +213,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... Odyssey_server"
+	@echo "... Archivador.o"
+	@echo "... Archivador.i"
+	@echo "... Archivador.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

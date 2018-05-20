@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/elias/CLionProjects/Odyssey_server/Archivador.cpp" "/home/elias/CLionProjects/Odyssey_server/cmake-build-debug/CMakeFiles/Odyssey_server.dir/Archivador.cpp.o"
   "/home/elias/CLionProjects/Odyssey_server/main.cpp" "/home/elias/CLionProjects/Odyssey_server/cmake-build-debug/CMakeFiles/Odyssey_server.dir/main.cpp.o"
   "/home/elias/CLionProjects/Odyssey_server/tinyxml2.cpp" "/home/elias/CLionProjects/Odyssey_server/cmake-build-debug/CMakeFiles/Odyssey_server.dir/tinyxml2.cpp.o"
   )

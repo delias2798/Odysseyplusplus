@@ -1,0 +1,50 @@
+{
+	"Usuario" : 
+	{
+		"adhs" : 
+		{
+			"Apellido" : "Solano",
+			"amigos" : "No tengo",
+			"contrasena" : "123456",
+			"edad" : "22",
+			"gustos" : "Any",
+			"nombre" : "Eduardo"
+		},
+		"age" : null,
+		"david1" : 
+		{
+			"contrasena" : "4321",
+			"nombre" : "David"
+		},
+		"delias" : 
+		{
+			"contrasena" : "1234",
+			"nombre" : "Elias"
+		},
+		"friends" : null,
+		"jjj" : 
+		{
+			"contrasena" : "jojo",
+			"nombre" : "juancito"
+		},
+		"lastname" : null,
+		"like" : null,
+		"name" : null,
+		"nedd" : 
+		{
+			"contrasena" : "abcd",
+			"nombre" : "Eduardo"
+		},
+		"otor" : 
+		{
+			"Apellido" : "ss",
+			"amigos" : "hhhhhh",
+			"contrasena" : "123456",
+			"edad" : "22",
+			"gustos" : "htyghf",
+			"nombre" : "dfs"
+		},
+		"pass" : null,
+		"username" : null
+	}
+}

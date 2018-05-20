@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Odyssey_server.dir/main.cpp.o"
   "CMakeFiles/Odyssey_server.dir/tinyxml2.cpp.o"
+  "CMakeFiles/Odyssey_server.dir/Archivador.cpp.o"
   "Odyssey_server.pdb"
   "Odyssey_server"
 )
