@@ -42,6 +42,36 @@ public class connect {
             e.printStackTrace();
         }
     }
+    public String need_answer(String msg){
+        try {
+            InetAddress address = InetAddress.getByName(Host);
+            sc = new Socket(address, PORT);
+
+            //Send the message to the server
+            OutputStream os = sc.getOutputStream();
+            OutputStreamWriter osw = new OutputStreamWriter(os);
+            BufferedWriter bw = new BufferedWriter(osw);
+
+            String number = msg;//"Espero que sirva";
+
+            String sendMessage = number + "\n";
+            bw.write(sendMessage);
+            bw.flush();
+            System.out.println("Message sent to the server : "+sendMessage);
+
+            //Get the return message from the server
+            InputStream is = sc.getInputStream();
+            InputStreamReader isr = new InputStreamReader(is);
+            BufferedReader br = new BufferedReader(isr);
+            String message = br.readLine();
+            System.out.println("Message received from the server : " +message);
+            return message;
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     public void initServer2(){
         try{

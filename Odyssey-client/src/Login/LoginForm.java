@@ -1,5 +1,8 @@
 package Login;
 
+import Connection.connect;
+import XMLconvert.JAXBObjectToXml;
+import XMLconvert.User;
 import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.NotSupportedException;
 import com.mpatric.mp3agic.UnsupportedTagException;
@@ -53,8 +56,26 @@ public class LoginForm extends JFrame implements ActionListener {
             public void actionPerformed(ActionEvent actionEvent) {
                 String uname = tf1.getText();
                 String pass = p1.getText();
-                if(uname.equals("Usuario") && pass.equals("123"))
+                connect c = new connect();
+                JAXBObjectToXml xml = new JAXBObjectToXml();
+                User usu = new User();
+                usu.setUsername(uname);
+                usu.setPass(pass);
+                /*String user=c.need_answer("&"+xml.ConvertToXML(usu,User.class)+"<!--log_usu-->");
+                usu=xml.ConvertToUser(user);*/
+                if((uname.equals("Usuario") && pass.equals("123"))/*||(usu!=null)*/)
                 {
+                    try {
+                        Interface interFace = new Interface();
+                    } catch (UnsupportedTagException e) {
+                        e.printStackTrace();
+                    } catch (InvalidDataException e) {
+                        e.printStackTrace();
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    } catch (NotSupportedException e) {
+                        e.printStackTrace();
+                    }
                 }
                 else
                 {
@@ -67,18 +88,7 @@ public class LoginForm extends JFrame implements ActionListener {
         regBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
-                //RegisterForm reg = new RegisterForm();
-                try {
-                    Interface inter = new Interface();
-                } catch (UnsupportedTagException e) {
-                    e.printStackTrace();
-                } catch (InvalidDataException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (NotSupportedException e) {
-                    e.printStackTrace();
-                }
+                RegisterForm reg = new RegisterForm();
                 frame.setVisible(false);
 
 

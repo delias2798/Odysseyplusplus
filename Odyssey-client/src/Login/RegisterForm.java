@@ -15,6 +15,8 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.io.StringWriter;
 
+import Connection.connect;
+
 
 public class RegisterForm extends JFrame implements ActionListener {
 
@@ -104,20 +106,9 @@ public class RegisterForm extends JFrame implements ActionListener {
                 user.setLike(genreJtext.getText());
                 user.setFriends(friendsJtext.getText());
                 JAXBObjectToXml xml = new JAXBObjectToXml();
-
-                System.out.println(xml.ConvertToXML(user, User.class));
-                try {
-                    Interface interFace = new Interface();
-                } catch (UnsupportedTagException e) {
-                    e.printStackTrace();
-                } catch (InvalidDataException e) {
-                    e.printStackTrace();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                } catch (NotSupportedException e) {
-                    e.printStackTrace();
-                }
-
+                connect c = new connect();
+                String send="&"+xml.ConvertToXML(user,User.class)+"<!--new_usu-->";
+                c.connect(send);
 
             }
         });

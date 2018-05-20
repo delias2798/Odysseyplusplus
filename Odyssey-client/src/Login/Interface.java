@@ -13,6 +13,10 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.Vector;
+
+import Connection.connect;
+import XMLconvert.JAXBObjectToXml;
+import XMLconvert.Track;
 import com.mpatric.mp3agic.ID3v1;
 import com.mpatric.mp3agic.ID3v1Tag;
 import com.mpatric.mp3agic.ID3v2;
@@ -21,6 +25,7 @@ import com.mpatric.mp3agic.InvalidDataException;
 import com.mpatric.mp3agic.Mp3File;
 import com.mpatric.mp3agic.NotSupportedException;
 import com.mpatric.mp3agic.UnsupportedTagException;
+import com.sun.rowset.internal.Row;
 
 public class Interface extends JFrame  {
     DefaultTableModel model = new DefaultTableModel();
@@ -169,14 +174,38 @@ public class Interface extends JFrame  {
                     id3v1Tag.setAlbum("Album");
                     id3v1Tag.setYear("Year");
                     id3v1Tag.setGenre(0);
+                    row[0] = id3v1Tag.getArtist();
+                    row[1] = id3v1Tag.getTitle();
+                    row[2] = id3v1Tag.getAlbum();
+                    row[3] = id3v1Tag.getGenre() + " (" + id3v1Tag.getGenreDescription() + ")";
+                    row[4] = id3v1Tag.getYear();
+                    row[5] = song;
+                    model.addRow(row);
+
+                    ArtistJtext.setText("Artist");
+                    TitleJtext.setText("Title");
+                    AlbumJtext.setText("Album");
+                    YearJtext.setText("Year");
+                    GenreJtext.setText("0");
+
+
 
 
                 }
 
-                String message = "Who Framed Roger Rabbit";
-                for (int i = 0; i < message.length(); i += 10) {
-                    System.out.println(message.substring(i, Math.min(i + 10, message.length())));
-                }
+                Track track = new Track();
+                track.setTitle(TitleJtext.getText());
+                track.setArtist(ArtistJtext.getText());
+                track.setAlbum(AlbumJtext.getText());
+                track.setYear(YearJtext.getText());
+                track.setGenre(GenreJtext.getText());
+
+                JAXBObjectToXml xml = new JAXBObjectToXml();
+                String send="&"+xml.ConvertToXML(track,Track.class)+"<!--new_can-->";
+                System.out.println(send);
+                /*connect c = new connect();
+                c.connect(send);*/
+
 
 
 
@@ -199,9 +228,10 @@ public class Interface extends JFrame  {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 int i = table.getSelectedRow();
+                System.out.println(i);
                 if (i >= 0){
                     song = model.getValueAt(i,5).toString();
-                    Mp3File mp3file = null;
+                    /*Mp3File mp3file = null;
                     try {
                         mp3file = new Mp3File(song);
                     } catch (IOException e) {
@@ -210,13 +240,13 @@ public class Interface extends JFrame  {
                         e.printStackTrace();
                     } catch (InvalidDataException e) {
                         e.printStackTrace();
-                    }
+                    }*/
                     model.setValueAt(ArtistJtext.getText(), i, 0);
                     model.setValueAt(TitleJtext.getText(), i, 1);
                     model.setValueAt(AlbumJtext.getText(), i, 2);
                     model.setValueAt(GenreJtext.getText(), i, 3);
                     model.setValueAt(YearJtext.getText(), i, 4);
-                    ID3v1 id3v1Tag;
+                    /*ID3v1 id3v1Tag;
                     if (mp3file.hasId3v1Tag()) {
                         id3v1Tag =  mp3file.getId3v1Tag();
                     } else {
@@ -237,7 +267,20 @@ public class Interface extends JFrame  {
                         e.printStackTrace();
                     } catch (NotSupportedException e) {
                         e.printStackTrace();
-                    }
+                    }*/
+                    Track track = new Track();
+                    track.setTitle(TitleJtext.getText());
+                    track.setArtist(ArtistJtext.getText());
+                    track.setAlbum(AlbumJtext.getText());
+                    track.setYear(YearJtext.getText());
+                    track.setGenre(GenreJtext.getText());
+
+                    JAXBObjectToXml xml = new JAXBObjectToXml();
+                    String send="&"+xml.ConvertToXML(track,Track.class)+"<!--act_can-->";
+                    System.out.println(send);
+                    /*connect c = new connect();
+                    c.connect(send);*/
+
 
 
                 }else {
@@ -255,6 +298,18 @@ public class Interface extends JFrame  {
                 int i = table.getSelectedRow();
                 if (i >= 0){
                     model.removeRow(i);
+                    Track track = new Track();
+                    track.setTitle(TitleJtext.getText());
+                    track.setArtist(ArtistJtext.getText());
+                    track.setAlbum(AlbumJtext.getText());
+                    track.setYear(YearJtext.getText());
+                    track.setGenre(GenreJtext.getText());
+
+                    JAXBObjectToXml xml = new JAXBObjectToXml();
+                    String send="&"+xml.ConvertToXML(track,Track.class)+"<!--del_can-->";
+                    System.out.println(send);
+                    /*connect c = new connect();
+                    c.connect(send);*/
                 }else {
                     JOptionPane.showMessageDialog(null, "There is no option", "InfoBox: " + "Error", JOptionPane.INFORMATION_MESSAGE);
                 }
