@@ -12,6 +12,7 @@ import java.awt.event.MouseEvent;
 import java.io.FilenameFilter;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.util.Set;
 import java.util.Vector;
 
 import Connection.connect;
@@ -29,7 +30,7 @@ import com.sun.rowset.internal.Row;
 
 public class Interface extends JFrame  {
     DefaultTableModel model = new DefaultTableModel();
-    DefaultListModel listModelUser, listModelFriends;
+    DefaultListModel listModelUser;
     String[] columnNames = {"Title",
             "Artist",
             "Album",
@@ -39,17 +40,17 @@ public class Interface extends JFrame  {
     Object[] row = new Object[6];
 
     JTable table;
-    JScrollPane scroll, scrollList, flistScroll;
-    JButton addMusic, editMusic, delMusic, playMusic, search, fRequest;
-    JList searchUsers, flist;
+    JScrollPane scroll, scrollList;
+    JButton addMusic, editMusic, delMusic, playMusic, search, fRequest, Art, Albu, Title, Settings;
+    JList searchUsers;
     JFileChooser chooser;
     JLabel ArtistJlabel, TitleJLabel, AlbumJlabel, YearJlabel, GenreJlabel;
-    JTextField ArtistJtext,TitleJtext, AlbumJtext, GenreJtext, YearJtext, searchJText;
+    JTextField ArtistJtext,TitleJtext, AlbumJtext, GenreJtext, YearJtext, searchJText,Lyrics;
+    JSlider progress;
     String song = "/home/david/Documents/Mp3/Animal I Have Become.mp3";
     Interface() throws UnsupportedTagException, InvalidDataException, IOException, NotSupportedException{
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         JFrame Interface = new JFrame("Interface Form");
-        listModelFriends = new DefaultListModel();
         listModelUser = new DefaultListModel();
         ArtistJlabel = new JLabel("Artist");
         ArtistJtext = new JTextField();
@@ -68,22 +69,29 @@ public class Interface extends JFrame  {
         searchJText = new JTextField();
         search = new JButton("Search User");
         fRequest = new JButton("Friend Request");
+        Art = new JButton("Art");
+        Albu = new JButton("Albu");
+        Title = new JButton("Title");
+        Settings = new JButton("Settings");
+        Lyrics = new JTextField();
+        progress = new JSlider(JSlider.HORIZONTAL);
         chooser = new JFileChooser();
         searchUsers = new JList(listModelUser);
         searchUsers.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
         searchUsers.setLayoutOrientation(JList.VERTICAL);
         searchUsers.setVisibleRowCount(-1);
-        flist = new JList(listModelFriends);
         table = new JTable();
         model.setColumnIdentifiers(columnNames);
         table.setModel(model);
         scroll = new JScrollPane(table);
         scrollList = new JScrollPane(searchUsers);
-        flistScroll = new JScrollPane(flist);
         table.setFillsViewportHeight(true);
 
 
-        scroll.setBounds(30,30,300,100);
+        scroll.setBounds(30,40,300,100);
+        Art.setBounds(30,5,100,30);
+        Albu.setBounds(140,5,100,30);
+        Title.setBounds(250,5,100,30);
         addMusic.setBounds(30,150,100,30);
         delMusic.setBounds(200,150,100,30);
         editMusic.setBounds(30,200,100,30);
@@ -100,15 +108,20 @@ public class Interface extends JFrame  {
         GenreJtext.setBounds(80,450,160,30);
         searchJText.setBounds(600,130,230,30);
         search.setBounds(600,170,150,30);
-        fRequest.setBounds(830,170,150,30);
+        fRequest.setBounds(750,170,150,30);
         scrollList.setBounds(600,30,300,100);
-        flistScroll.setBounds(600,250,300,100);
+        Settings.setBounds(900,1,100,30);
+        Lyrics.setBounds(360,50,200,300);
+        progress.setBounds(330,350,250,100);
 
 
 
 
 
         Interface.add(scroll);
+        Interface.add(Art);
+        Interface.add(Albu);
+        Interface.add(Title);
         Interface.add(addMusic);
         Interface.add(delMusic);
         Interface.add(editMusic);
@@ -127,7 +140,9 @@ public class Interface extends JFrame  {
         Interface.add(searchJText);
         Interface.add(search);
         Interface.add(fRequest);
-        Interface.add(flistScroll);
+        Interface.add(Settings);
+        Interface.add(progress);
+        Interface.add(Lyrics);
         Interface.setSize(1000,500);
         Interface.setLayout(null);
         Interface.setVisible(true);
@@ -160,7 +175,6 @@ public class Interface extends JFrame  {
                     row[4] = id3v1Tag.getYear();
                     row[5] = song;
                     model.addRow(row);
-                    listModelUser.addElement(id3v1Tag.getArtist());
                 }else {
                     ID3v1 id3v1Tag;
                     if (mp3file.hasId3v1Tag()) {
@@ -321,7 +335,12 @@ public class Interface extends JFrame  {
             public void actionPerformed(ActionEvent actionEvent) {
                 int index = searchUsers.getSelectedIndex();
                 String user = (String) listModelUser.getElementAt(index);
-                listModelFriends.addElement(user);
+            }
+        });
+        Settings.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                SettingsForm settings = new SettingsForm();
             }
         });
     }

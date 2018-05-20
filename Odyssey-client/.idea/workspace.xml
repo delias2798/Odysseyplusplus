@@ -10,17 +10,21 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/Odyssey_client$LoginForm.ic" NAME="LoginForm Coverage Results" MODIFIED="1526820503211" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Login.*</FILTER>
+    </SUITE>
+  </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Interface.java" pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Interface.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Login/Interface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="177" column="49" lean-forward="true" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
+            <state relative-caret-position="315">
+              <caret line="342" column="59" selection-start-line="342" selection-start-column="59" selection-end-line="342" selection-end-column="59" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#8297#8871#0" expanded="true" />
-                <element signature="e#8870#8871#0" expanded="true" />
+                <element signature="e#13815#13816#0" expanded="true" />
+                <element signature="e#13888#13889#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -29,22 +33,29 @@
       <file leaf-file-name="LoginForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Login/LoginForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="199">
-              <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+            <state relative-caret-position="184">
+              <caret line="65" column="41" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SettingsForm.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Login/SettingsForm.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="33" selection-start-line="33" selection-end-line="33" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3403#3404#0" expanded="true" />
-                <element signature="e#3434#3435#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RegisterForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="RegisterForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Login/RegisterForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="73" column="28" lean-forward="true" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
+            <state relative-caret-position="419">
+              <caret line="123" lean-forward="true" selection-end-line="123" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -55,8 +66,8 @@
       <file leaf-file-name="connect.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Connection/connect.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+            <state relative-caret-position="870">
+              <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -67,8 +78,8 @@
       <file leaf-file-name="music_player.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Player/music_player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-169">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="60">
+              <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -76,8 +87,8 @@
       <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/XMLconvert/User.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="99" column="7" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="99" selection-end-column="7" />
+            <state relative-caret-position="1035">
+              <caret line="99" column="7" selection-start-line="89" selection-start-column="4" selection-end-line="99" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#438#439#0" expanded="true" />
@@ -114,6 +125,7 @@
         <option value="$PROJECT_DIR$/src/Login/RegisterForm.java" />
         <option value="$PROJECT_DIR$/src/Connection/connect.java" />
         <option value="$PROJECT_DIR$/src/Login/LoginForm.java" />
+        <option value="$PROJECT_DIR$/src/Login/SettingsForm.java" />
         <option value="$PROJECT_DIR$/src/Login/Interface.java" />
       </list>
     </option>
@@ -130,7 +142,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,6 +182,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -179,7 +191,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Proyecto2/addAudio" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../commons-io-2.5/commons-io-2.5.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -331,22 +343,23 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <frame x="64" y="-11" width="1297" height="675" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32732734" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3262032" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.25825825" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.25668448" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21368179" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21312742" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -366,12 +379,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.25825825" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21368179" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
@@ -381,7 +394,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32732734" />
@@ -406,13 +419,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/XMLconvert/JAXBObjectToXml.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/XMLconvert/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="780">
@@ -489,11 +495,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="51" column="17" selection-start-line="51" selection-start-column="17" selection-end-line="51" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3403#3404#0" expanded="true" />
-            <element signature="e#3434#3435#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,9 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-253">
           <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -611,9 +609,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1350">
           <caret line="90" column="11" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -657,9 +652,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="600">
           <caret line="40" column="26" selection-start-line="40" selection-start-column="26" selection-end-line="40" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -788,17 +780,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Player/music_player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-169">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/XMLconvert/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="99" column="7" lean-forward="true" selection-start-line="89" selection-start-column="4" selection-end-line="99" selection-end-column="7" />
+        <state relative-caret-position="1035">
+          <caret line="99" column="7" selection-start-line="89" selection-start-column="4" selection-end-line="99" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#438#439#0" expanded="true" />
@@ -809,8 +794,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Connection/connect.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="72" column="20" selection-start-line="72" selection-start-column="20" selection-end-line="72" selection-end-column="20" />
+        <state relative-caret-position="870">
+          <caret line="90" column="1" selection-start-line="90" selection-start-column="1" selection-end-line="90" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Player/music_player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login/RegisterForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="123" lean-forward="true" selection-end-line="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Login/SettingsForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="33" selection-start-line="33" selection-end-line="33" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -819,34 +831,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Login/LoginForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3403#3404#0" expanded="true" />
-            <element signature="e#3434#3435#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="184">
+          <caret line="65" column="41" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Login/Interface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="177" column="49" lean-forward="true" selection-start-line="177" selection-start-column="49" selection-end-line="177" selection-end-column="49" />
+        <state relative-caret-position="315">
+          <caret line="342" column="59" selection-start-line="342" selection-start-column="59" selection-end-line="342" selection-end-column="59" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8297#8871#0" expanded="true" />
-            <element signature="e#8870#8871#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Login/RegisterForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="73" column="28" lean-forward="true" selection-start-line="73" selection-start-column="28" selection-end-line="73" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#13815#13816#0" expanded="true" />
+            <element signature="e#13888#13889#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -917,7 +913,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>jl1.0.1</last-edited>
+          <last-edited>commons-io-2.51</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

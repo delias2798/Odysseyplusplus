@@ -1,7 +1,7 @@
 <component name="libraryTable">
-  <library name="jl1.0.1">
+  <library name="commons-cli-1.2">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/jlayer-1.0.1.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-cli-1.2.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

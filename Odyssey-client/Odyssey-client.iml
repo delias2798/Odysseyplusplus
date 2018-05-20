@@ -26,5 +26,8 @@
     <orderEntry type="library" name="commons-codec-1.1" level="project" />
     <orderEntry type="library" name="com.mpatric:mp3agic:0.9.1" level="project" />
     <orderEntry type="library" name="mp3agic-0.9.1" level="project" />
+    <orderEntry type="library" name="commons-build-plugin-1.4" level="project" />
+    <orderEntry type="library" name="commons-cli-1.2" level="project" />
+    <orderEntry type="library" name="commons-io-2.51" level="project" />
   </component>
 </module>
