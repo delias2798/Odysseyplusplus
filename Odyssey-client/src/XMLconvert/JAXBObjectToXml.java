@@ -6,6 +6,8 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
+import java.beans.ExceptionListener;
+import java.beans.XMLEncoder;
 import java.io.StringWriter;
 import java.io.*;
 
@@ -16,15 +18,15 @@ public class JAXBObjectToXml {
         Track track = new Track();
         Track track2 = new Track();
 
-        track.setId(1);
-        track.setTitle("Hey Jude");
+        track.setTitle("Hey Jude2");
         track.setGenre("Rock?");
         track.setAlbum("No me recuerod");
         track.setArtist("The Beatles");
         track.setYear("19##");
         track.setLetter("Hey jude, nananananan, he");
 
-        String xml_string="&new_can"+xml.ConvertToXML(track,Track.class);
+        String xml_string="&"+xml.ConvertToXML(track,Track.class)+"<!--new_can-->";
+        String test="&"+"<!--bus_can-->"+"hey jude";
         connection.connect(xml_string);
         /*System.out.println(xml_string);
         track2=xml.ConvertToTrack(xml_string);
@@ -49,6 +51,19 @@ public class JAXBObjectToXml {
         s.setChunk(1);
         s.setByte_song(b);
         System.out.println(xml.ConvertToXML(s,Song.class));*/
+    }
+    public void serializeToXML (SerializeSong settings) throws IOException
+    {
+        FileOutputStream fos = new FileOutputStream("/home/toshiba/Escritorio/Proyecto2/song.xml");
+        XMLEncoder encoder = new XMLEncoder(fos);
+        encoder.setExceptionListener(new ExceptionListener() {
+            public void exceptionThrown(Exception e) {
+                System.out.println("Exception! :"+e.toString());
+            }
+        });
+        encoder.writeObject(settings);
+        encoder.close();
+        fos.close();
     }
 
     public String ConvertToXML(Object object, Class class_){

@@ -5,14 +5,14 @@ import java.io.*;
 public class connect {
     public static void main(String[] args){
         connect x = new connect();
-        x.connect("hola111111");
+        x.initServer2();
     }
 
-    final String Host="192.168.1.109";
+    final String Host=/*"LocalHost";//*/"192.168.1.109";
     final int PORT=8080;
-    Socket sc,clientSocket;
-    DataOutputStream out;
-    DataInputStream in;
+    Socket sc;
+    DataOutputStream mensaje;
+    DataInputStream entrada;
 
     public void connect(String msg){
         try {
@@ -32,13 +32,29 @@ public class connect {
             System.out.println("Message sent to the server : "+sendMessage);
 
             //Get the return message from the server
-            InputStream is = sc.getInputStream();
+           /* InputStream is = sc.getInputStream();
             InputStreamReader isr = new InputStreamReader(is);
             BufferedReader br = new BufferedReader(isr);
             String message = br.readLine();
-            System.out.println("Message received from the server : " +message);
+            System.out.println("Message received from the server : " +message);*/
 
         }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+    public void initServer2(){
+        try{
+            sc=new Socket(Host,PORT);
+
+            mensaje = new DataOutputStream(sc.getOutputStream());
+            mensaje.writeUTF("Holaaaa");
+
+
+            //System.out.println(entrada.read());
+
+            sc.close();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

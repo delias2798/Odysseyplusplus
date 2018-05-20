@@ -9,13 +9,14 @@ import java.io.*;
 
 public class music_player {//librerias jlayer, jgroups
     InputStream bis;
-    /*public static void main(String[] args) {
-        String song="/home/toshiba/Música/test2.mp3";
+    public static void main(String[] args) {
+        String song="/home/toshiba/Música/grito.mp3";
         music_player player = new music_player();
-        player.build_song(song);
+        player.play(player.build_song(song));
 
 
-    }*/
+
+    }
     public music_player(){}
 
     public byte[] build_song(String song){

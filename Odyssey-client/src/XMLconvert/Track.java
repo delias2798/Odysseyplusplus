@@ -5,7 +5,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Track {
-    private Integer id;
+
     private String title;
     private String genre;
     private String artist;
@@ -16,14 +16,6 @@ public class Track {
     public Track() {
     }
 
-    public Integer getId() {
-        return id;
-    }
-
-    @XmlAttribute
-    public void setId(Integer id) {
-        this.id = id;
-    }
 
     @XmlElement
     public String getTitle() {
@@ -85,7 +77,6 @@ public class Track {
     @Override
     public String toString() {
         return "Track{" +
-                "id=" + id +
                 ", title=" + title + "'" +
                 ", genre=" + genre + "'" +
                 ", artist=" + artist + "'" +

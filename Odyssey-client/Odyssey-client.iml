@@ -12,7 +12,6 @@
     <orderEntry type="library" name="org.jgroups:jgroups:4.0.11.Final" level="project" />
     <orderEntry type="library" name="org.apache.commons:commons-build-plugin:1.4" level="project" />
     <orderEntry type="library" name="commons-io-2.5" level="project" />
-    <orderEntry type="library" name="com.badlogicgames.jlayer:jlayer:1.0.2-gdx" level="project" />
     <orderEntry type="module-library">
       <library>
         <CLASSES>
@@ -23,5 +22,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="jl1.0.1" level="project" />
+    <orderEntry type="library" name="javazoom:jlayer:1.0.1" level="project" />
+    <orderEntry type="library" name="commons-codec-1.1" level="project" />
   </component>
 </module>
